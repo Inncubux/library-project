@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7381ac64-d9e8-46be-a955-421219e6bb24" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="library" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="library" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="library" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="help" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="library" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.5525754626970443" />
+      <entry key="MS500" value="2.5122013897216244" />
+      <entry key="S2" value="4.41384610985536" />
+      <entry key="S5" value="11.079512245064135" />
+      <entry key="S10" value="22.662924091678992" />
+      <entry key="S30" value="46.348886247492004" />
+      <entry key="S60" value="60.93636981186143" />
+      <entry key="M2" value="84.83143295050611" />
+      <entry key="M5" value="146.20408159054037" />
+      <entry key="M10" value="202.83381891733674" />
+      <entry key="M15" value="231.4803565181012" />
+      <entry key="M30" value="267.4692522610621" />
+      <entry key="H1" value="288.8789313361552" />
+      <entry key="H2" value="300.5775609401955" />
+      <entry key="H4" value="306.69524984560366" />
+      <entry key="D1" value="311.93594974227085" />
+      <entry key="W1" value="312.84766456146156" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="5.88596095E-316" />
+      <entry key="S2" value="1.557594285369202E-79" />
+      <entry key="S5" value="2.9990364078131756E-32" />
+      <entry key="S10" value="1.7317726201245819E-16" />
+      <entry key="S30" value="5.573957115012199E-6" />
+      <entry key="S60" value="0.0023609229371184893" />
+      <entry key="M2" value="0.048589329457386844" />
+      <entry key="M5" value="0.2982746620401233" />
+      <entry key="M10" value="0.54614527558162" />
+      <entry key="M15" value="0.6681471507909431" />
+      <entry key="M30" value="0.8174026858231798" />
+      <entry key="H1" value="0.904103249536896" />
+      <entry key="H2" value="0.9508434411283984" />
+      <entry key="H4" value="0.9751120146569788" />
+      <entry key="D1" value="0.9958083217509374" />
+      <entry key="W1" value="0.999400110297359" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.4781729368387624" />
+      <entry key="MS500" value="2.487030137302584" />
+      <entry key="S2" value="4.402546842785894" />
+      <entry key="S5" value="11.067689842724677" />
+      <entry key="S10" value="22.650156093717445" />
+      <entry key="S30" value="46.33955012826374" />
+      <entry key="S60" value="60.93232333037697" />
+      <entry key="M2" value="84.87497552828331" />
+      <entry key="M5" value="146.49769837938044" />
+      <entry key="M10" value="203.37625268662026" />
+      <entry key="M15" value="232.14554776614196" />
+      <entry key="M30" value="268.28487037181804" />
+      <entry key="H1" value="289.7820503120921" />
+      <entry key="H2" value="301.52788701695584" />
+      <entry key="H4" value="307.67009656994446" />
+      <entry key="D1" value="312.931712904492" />
+      <entry key="W1" value="313.8470581969112" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3IjZlk83BOQGLKlJStwmRBGKgZi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Gradle.library [:cl.ucn.disc.arqsist.library.App.main()].executor": "Run",
+    "Gradle.library [artifactTransforms].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/axel0/OneDrive/Escritorio/library",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.library">
+    <configuration name="library" type="Application" factoryName="Application" temporary="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-26" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="cl.ucn.disc.arqsist.library.App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cl.ucn.disc.arqsist.library.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="library [artifactTransforms]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="artifactTransforms" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.library" />
+        <item itemvalue="Gradle.library [artifactTransforms]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7381ac64-d9e8-46be-a955-421219e6bb24" name="Changes" comment="" />
+      <created>1788280093134</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1788280093134</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
