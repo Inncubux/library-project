@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7381ac64-d9e8-46be-a955-421219e6bb24" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/dao/LoanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/dao/LoanDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/dao/MemberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/dao/ReservationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/dao/ReservationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/model/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/model/Member.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,61 +54,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.6608827763289917" />
-      <entry key="MS500" value="2.7687307887148433" />
-      <entry key="S2" value="7.999680828067916" />
-      <entry key="S5" value="14.695313776693643" />
-      <entry key="S10" value="20.066779474903832" />
-      <entry key="S30" value="27.080838868415928" />
-      <entry key="S60" value="29.891354711086144" />
-      <entry key="M2" value="34.385127927171254" />
-      <entry key="M5" value="58.93668272288858" />
-      <entry key="M10" value="100.31456964969969" />
-      <entry key="M15" value="128.76917299958643" />
-      <entry key="M30" value="174.54663089482798" />
-      <entry key="H1" value="245.70666382981588" />
-      <entry key="H2" value="425.68972098328624" />
-      <entry key="H4" value="697.5022998852492" />
-      <entry key="D1" value="1190.5391460438516" />
-      <entry key="W1" value="1318.0963839794244" />
+      <entry key="MS100" value="1.4665177628643575" />
+      <entry key="MS500" value="2.0689814692208697" />
+      <entry key="S2" value="6.823955869610065" />
+      <entry key="S5" value="14.149375737581789" />
+      <entry key="S10" value="18.968998542526776" />
+      <entry key="S30" value="23.35253931538323" />
+      <entry key="S60" value="24.685973845833143" />
+      <entry key="M2" value="25.8133713793823" />
+      <entry key="M5" value="29.99809475329122" />
+      <entry key="M10" value="50.70563448802513" />
+      <entry key="M15" value="79.54484350090036" />
+      <entry key="M30" value="153.75621690783413" />
+      <entry key="H1" value="256.8653524057796" />
+      <entry key="H2" value="451.40693132601143" />
+      <entry key="H4" value="739.7541330756816" />
+      <entry key="D1" value="1283.3938625451326" />
+      <entry key="W1" value="1427.9054506296493" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.1409952690923772E-135" />
-      <entry key="MS500" value="1.0267312220060251E-27" />
-      <entry key="S2" value="1.790363272465782E-7" />
-      <entry key="S5" value="0.0020637115999558105" />
-      <entry key="S10" value="0.05267582519445738" />
-      <entry key="S30" value="0.5545394416258194" />
-      <entry key="S60" value="1.0428341483033554" />
-      <entry key="M2" value="1.4716238051853268" />
-      <entry key="M5" value="2.394330374644151" />
-      <entry key="M10" value="4.052456479092184" />
-      <entry key="M15" value="5.419559243596417" />
-      <entry key="M30" value="8.34398477888532" />
-      <entry key="H1" value="14.195424063100944" />
-      <entry key="H2" value="27.029874512987277" />
-      <entry key="H4" value="43.66346500072735" />
-      <entry key="D1" value="70.3704224876644" />
-      <entry key="W1" value="76.85058297461438" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.9415963321329943E-215" />
+      <entry key="S2" value="2.799503926790081E-54" />
+      <entry key="S5" value="5.56163277720015E-22" />
+      <entry key="S10" value="3.315854758719478E-11" />
+      <entry key="S30" value="5.093139828672972E-4" />
+      <entry key="S60" value="0.031910737880914884" />
+      <entry key="M2" value="0.2526322596530099" />
+      <entry key="M5" value="0.8972779915193043" />
+      <entry key="M10" value="1.7202948605058612" />
+      <entry key="M15" value="2.6715485357066693" />
+      <entry key="M30" value="5.5921577589985745" />
+      <entry key="H1" value="11.509077204239421" />
+      <entry key="H2" value="24.20945986422796" />
+      <entry key="H4" value="41.605204676987945" />
+      <entry key="D1" value="71.23977203943167" />
+      <entry key="W1" value="78.67304765569605" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.5556213237356065" />
-      <entry key="MS500" value="2.731452535784123" />
-      <entry key="S2" value="7.971184085339379" />
-      <entry key="S5" value="14.675313404799208" />
-      <entry key="S10" value="20.100066995388453" />
-      <entry key="S30" value="27.614787323796694" />
-      <entry key="S60" value="30.917789445394828" />
-      <entry key="M2" value="35.84579266779943" />
-      <entry key="M5" value="61.32350222975114" />
-      <entry key="M10" value="104.36010362828974" />
-      <entry key="M15" value="134.182401177051" />
-      <entry key="M30" value="182.88538093990277" />
-      <entry key="H1" value="259.89547774793925" />
-      <entry key="H2" value="452.7106364959325" />
-      <entry key="H4" value="741.1573937065871" />
-      <entry key="D1" value="1260.9071058360505" />
-      <entry key="W1" value="1394.946577764181" />
+      <entry key="MS100" value="1.3970605528044404" />
+      <entry key="MS500" value="2.049344359480403" />
+      <entry key="S2" value="6.80395530094573" />
+      <entry key="S5" value="14.129560269465477" />
+      <entry key="S10" value="18.954920491421916" />
+      <entry key="S30" value="23.347020071063096" />
+      <entry key="S60" value="24.713296930148328" />
+      <entry key="M2" value="26.057826682727672" />
+      <entry key="M5" value="30.884376786882644" />
+      <entry key="M10" value="52.41669466313668" />
+      <entry key="M15" value="82.20836577258771" />
+      <entry key="M30" value="159.34202135807018" />
+      <entry key="H1" value="268.36779351386343" />
+      <entry key="H2" value="475.607885894973" />
+      <entry key="H4" value="781.351164583764" />
+      <entry key="D1" value="1354.6311138560122" />
+      <entry key="W1" value="1506.5780960307452" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -116,37 +120,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.library.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build libreria.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.library [:cl.ucn.disc.arqsist.library.App.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.library [artifactTransforms].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/axel0/OneDrive/Escritorio/libreria&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.library.executor": "Run",
+    "Gradle.Build libreria.executor": "Run",
+    "Gradle.DueDateDuplicationTest.executor": "Run",
+    "Gradle.library [:cl.ucn.disc.arqsist.library.App.main()].executor": "Run",
+    "Gradle.library [artifactTransforms].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/axel0/OneDrive/Escritorio/libreria",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.library">
+}]]></component>
+  <component name="RunManager" selected="Gradle.DueDateDuplicationTest">
     <configuration name="library" type="Application" factoryName="Application" temporary="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-26" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -160,6 +165,33 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="DueDateDuplicationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;cl.ucn.disc.arqsist.library.DueDateDuplicationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
     </configuration>
     <configuration name="library [artifactTransforms]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -188,6 +220,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DueDateDuplicationTest" />
         <item itemvalue="Application.library" />
         <item itemvalue="Gradle.library [artifactTransforms]" />
       </list>
@@ -213,6 +246,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/DueDateDuplicationTest.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

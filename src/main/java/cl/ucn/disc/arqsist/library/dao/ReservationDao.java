@@ -4,14 +4,14 @@
 
 package cl.ucn.disc.arqsist.library.dao;
 
-import cl.ucn.disc.arqsist.library.model.Book;
+import cl.ucn.disc.arqsist.library.model.Reservation;
 import com.j256.ormlite.support.ConnectionSource;
 
 /**
  * Data Access Object (DAO) for managing entities.
  * Inherits standard CRUD and transaction operations.
  */
-public final class ReservationDao extends BaseDao<Book> {
+public final class ReservationDao extends BaseDao<Reservation> {
 
     /**
      * Constructs a new instance with the specified connection source.
@@ -19,6 +19,6 @@ public final class ReservationDao extends BaseDao<Book> {
      * @param connectionSource The database connection source used for operations.
      */
     public ReservationDao(ConnectionSource connectionSource) {
-        super(connectionSource, Book.class);
+        super(connectionSource, Reservation.class);
     }
 }
