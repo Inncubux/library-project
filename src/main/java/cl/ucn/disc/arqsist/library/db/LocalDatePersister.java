@@ -48,7 +48,7 @@ public final class LocalDatePersister extends BaseDataType {
      */
     @Override
     public Object resultToSqlArg(FieldType fieldType, DatabaseResults results, int columnPos) throws SQLException {
-        return null;
+        return results.getString(columnPos);
     }
 
     /**
@@ -56,6 +56,9 @@ public final class LocalDatePersister extends BaseDataType {
      */
     @Override
     public Object sqlArgToJava(FieldType fieldType, Object sqlArg, int columnPos) {
+        if (sqlArg == null) {
+            return null;
+        }
         return LocalDate.parse((String) sqlArg);
     }
 
@@ -64,6 +67,9 @@ public final class LocalDatePersister extends BaseDataType {
      */
     @Override
     public Object javaToSqlArg(FieldType fieldType, Object javaObject) {
+        if (javaObject == null) {
+            return null;
+        }
         return javaObject.toString();
     }
 
