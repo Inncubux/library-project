@@ -37,10 +37,12 @@ public final class LoanService {
         }
 
         loan.setReturned(true);
-        loan.setReturnDate(LocalDate.now().toString());
+        loan.setReturnDate(LocalDate.now());
 
-        LocalDate due = LocalDate.parse(loan.getDueDate());
+        LocalDate due = loan.getDueDate();
         LocalDate today = LocalDate.now();
+
+        // Calculate overdue fee if the book is returned after de due date.
         if (today.isAfter(due)) {
             long daysOverdue = ChronoUnit.DAYS.between(due, today);
             loan.setOverdueFee(daysOverdue * 1.0);
@@ -55,7 +57,18 @@ public final class LoanService {
         return loan;
     }
 
+    /**
+     * Find all overdue loans.
+     *
+     * @return A list of all overdue loans.
+     */
     public List<Loan> overdueLoans() throws SQLException {
-        return loanDao.findAll().stream().filter(Loan::isOverdue).toList();
+        LocalDate today = LocalDate.now();
+
+        // Filter the loans to find those that are overdue.
+        return loanDao.findAll().stream()
+                .filter(loan -> !loan.isReturned()) // Only consider loans that have not been returned.
+                .filter(loan -> loan.getDueDate().isBefore(today)) // Only consider loans that are overdue.
+                .toList();
     }
 }
