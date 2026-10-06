@@ -14,22 +14,47 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
+/**
+ * Service class that manages operations and business logic for loan.
+ */
 public final class LoanService {
-
-    public static final int DUE_DAYS = 21;
-
+    /**
+     * The DAO used for loan persistence operations.
+     */
     private final LoanDao loanDao;
+
+    /**
+     * The DAO used for nook persistence operations.
+     */
     private final BookDao bookDao;
 
+    /**
+     * The constructor.
+     * @param loanDao The DAO used to handle loans.
+     * @param bookDao The DAO used to handle books.
+     */
     public LoanService(LoanDao loanDao, BookDao bookDao) {
         this.loanDao = loanDao;
         this.bookDao = bookDao;
     }
 
+    /**
+     * Retrieves all loans from the database.
+     *
+     * @return A list containing all loans.
+     * @throws SQLException If an error occurs during database operations.
+     */
     public List<Loan> findAll() throws SQLException {
         return loanDao.findAll();
     }
 
+    /**
+     * Processes the return of a borrowed book, marks the loan as returned,
+     * calculates any overdue fees, and increment the available copies of the book.
+     * @param loanId The loan ID.
+     * @return The updated loan.
+     * @throws SQLException If an error occurs during database operations.
+     */
     public Loan returnLoan(int loanId) throws SQLException {
         Loan loan = loanDao.findById(loanId);
         if (loan == null || loan.isReturned()) {

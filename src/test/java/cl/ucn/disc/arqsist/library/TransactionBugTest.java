@@ -11,17 +11,31 @@ import cl.ucn.disc.arqsist.library.db.Database;
 import cl.ucn.disc.arqsist.library.model.Book;
 import cl.ucn.disc.arqsist.library.service.MemberService;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+/**
+ * Unit test verifying transactional rollback behavior during loan checkout failures.
+ */
 class TransactionBugTest {
 
+    /**
+     * The DAO handling book persistence operations.
+     */
     private BookDao bookDao;
+
+    /**
+     * The service handling member operations.
+     */
     private MemberService memberService;
 
+    /**
+     * Sets up an in-memory database and required DAO and service instances before each test execution.
+     *
+     * @throws Exception If an error occurs during database setup or initialization.
+     */
     @BeforeEach
     void setUp() throws Exception {
         Database db = new Database("jdbc:sqlite::memory:");
@@ -31,6 +45,12 @@ class TransactionBugTest {
         memberService = new MemberService(memberDao, bookDao, loanDao);
     }
 
+    /**
+     * Verifies that a failed checkout transaction does not leave partial state modifications
+     * in the book's available copy count.
+     *
+     * @throws Exception If an unexpected error occurs during test execution.
+     */
     @Test
     void checkoutLeavesNoPartialStateOnFailure() throws Exception {
         Book book = new Book("Clean Code", "Robert C. Martin", "9780132350884", 2);

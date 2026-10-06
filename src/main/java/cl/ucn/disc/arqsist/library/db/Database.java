@@ -18,10 +18,22 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * Manages database initialization, schema table creation, and initial seed data.
+ */
 public final class Database {
 
+    /**
+     * The underlying ORMLite connection source.
+     */
     private final ConnectionSource connectionSource;
 
+    /**
+     * The constructor.
+     *
+     * @param jdbcUrl The JDBC connection URL.
+     * @throws SQLException If a database access error occurs during connection or table creation.
+     */
     public Database(String jdbcUrl) throws SQLException {
         this.connectionSource = new JdbcConnectionSource(jdbcUrl);
         TableUtils.createTableIfNotExists(connectionSource, Book.class);
@@ -30,10 +42,18 @@ public final class Database {
         TableUtils.createTableIfNotExists(connectionSource, Reservation.class);
     }
 
+    /**
+     * @return The connection source instance.
+     */
     public ConnectionSource connectionSource() {
         return connectionSource;
     }
 
+    /**
+     * Populates the database with initial seed data if the tables are currently empty.
+     *
+     * @throws SQLException If an error occurs during database operations.
+     */
     public void seedIfEmpty() throws SQLException {
         Dao<Book, Integer> bookDao = DaoManager.createDao(connectionSource, Book.class);
         if (bookDao.queryForAll().isEmpty()) {
@@ -74,6 +94,17 @@ public final class Database {
         }
     }
 
+    /**
+     * Creates a loan record and decrements the available copy count of the borrowed book.
+     *
+     * @param bookDao  The DAO used for book entity operations.
+     * @param loanDao  The DAO used for loan entity operations.
+     * @param member   The member borrowing the book.
+     * @param book     The book being loaned.
+     * @param loanDate The date when the loan starts.
+     * @param dueDate  The scheduled return due date.
+     * @throws SQLException If an error occurs during database creation or update operations.
+     */
     private void createLoan(Dao<Book, Integer> bookDao, Dao<Loan, Integer> loanDao, Member member, Book book, LocalDate loanDate, LocalDate dueDate) throws SQLException {
         loanDao.create(new Loan(member, book, loanDate, dueDate));
         book.setAvailableCopies(book.getAvailableCopies() - 1);

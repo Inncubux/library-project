@@ -10,14 +10,14 @@ import cl.ucn.disc.arqsist.library.model.Book;
 import java.util.List;
 
 /**
- * Service class that manages operations and business logic related to {@link Book}.
+ * Service class that manages operations and business logic for book.
  */
 public final class BookService {
 
     private final BookDao dao;
 
     /**
-     * Constructs a new {@code BookService} with the specified {@link BookDao}.
+     * Constructs a new BookService.
      *
      * @param dao The DAO used for book persistence operations.
      */
