@@ -1,5 +1,5 @@
 @startuml
-' Library monolith — class diagram
+' Library monolith — class diagram (Updated)
 ' Layered: controller -> service -> dao -> model (persistence via ORMLite)
 
 skin rose
@@ -29,31 +29,29 @@ hide stereotype
 
 package "controller" <<controller>> {
   class BookController {
-    - BookService service
-    - BookDao dao
+- BookService service
     + register(JavalinConfig) : void
   }
 
   class LoanController {
-    - MemberService memberService
-    - LoanService loanService
+- LoanService loanService
     + register(JavalinConfig) : void
   }
 
   class MemberController {
-    - MemberService service
+- MemberService service
     + register(JavalinConfig) : void
   }
 
   class ReservationController {
-    - ReservationService service
+- ReservationService service
     + register(JavalinConfig) : void
   }
 }
 
 package "service" <<service>> {
   class BookService {
-    - BookDao dao
+- BookDao dao
     + listAll() : List<Book>
     + findById(int) : Book
     + create(Book) : Book
@@ -62,27 +60,28 @@ package "service" <<service>> {
   }
 
   class LoanService {
-    - LoanDao loanDao
-    - BookDao bookDao
+- LoanDao loanDao
+- MemberDao memberDao
+- BookService bookService
+- Clock clock
+    + checkout(int, int) : Loan
     + findAll() : List<Loan>
     + returnLoan(int) : Loan
     + overdueLoans() : List<Loan>
   }
 
   class MemberService {
-    - MemberDao memberDao
-    - BookDao bookDao
-    - LoanDao loanDao
+- MemberDao memberDao
     + register(Member) : Member
     + findAll() : List<Member>
-    + checkout(int, int) : Loan
   }
 
   class ReservationService {
-    - ReservationDao reservationDao
-    - BookDao bookDao
-    - MemberDao memberDao
-    - LoanDao loanDao
+- ReservationDao reservationDao
+- MemberDao memberDao
+- LoanDao loanDao
+- BookService bookService
+- Clock clock
     + reserve(int, int) : Reservation
     + findAll() : List<Reservation>
     + fulfill(int) : Loan
@@ -135,12 +134,12 @@ package "dao" <<dao>> {
 
 package "model" <<model>> {
   class Book {
-    - int id
-    - String title
-    - String author
-    - String isbn
-    - int totalCopies
-    - int availableCopies
+- int id
+- String title
+- String author
+- String isbn
+- int totalCopies
+- int availableCopies
     + Book()
     + Book(String, String, String, int)
     + getId() : int
@@ -158,9 +157,9 @@ package "model" <<model>> {
   }
 
   class Member {
-    - int id
-    - String name
-    - String email
+- int id
+- String name
+- String email
     + Member()
     + Member(String, String)
     + getId() : int
@@ -172,14 +171,14 @@ package "model" <<model>> {
   }
 
   class Loan {
-    - int id
-    - Member member
-    - Book book
-    - LocalDate loanDate
-    - LocalDate dueDate
-    - LocalDate returnDate
-    - boolean returned
-    - double overdueFee
+- int id
+- Member member
+- Book book
+- LocalDate loanDate
+- LocalDate dueDate
+- LocalDate returnDate
+- boolean returned
+- double overdueFee
     + Loan()
     + Loan(Member, Book, LocalDate, LocalDate)
     + getId() : int
@@ -201,11 +200,11 @@ package "model" <<model>> {
   }
 
   class Reservation {
-    - int id
-    - Member member
-    - Book book
-    - LocalDate reservedAt
-    - boolean fulfilled
+- int id
+- Member member
+- Book book
+- LocalDate reservedAt
+- boolean fulfilled
     + Reservation()
     + Reservation(Member, Book, LocalDate)
     + getId() : int
@@ -223,13 +222,13 @@ package "model" <<model>> {
 
 package "db" <<db>> {
   class Database {
-    - ConnectionSource connectionSource
+- ConnectionSource connectionSource
     + connectionSource() : ConnectionSource
     + seedIfEmpty() : void
   }
 
   class LocalDatePersister {
-    - {static} LocalDatePersister SINGLETON
+- {static} LocalDatePersister SINGLETON
     + {static} getSingleton() : LocalDatePersister
     + parseDefaultString(FieldType, String) : Object
     + resultToSqlArg(FieldType, DatabaseResults, int) : Object
@@ -240,8 +239,6 @@ package "db" <<db>> {
 
 ' ----- controller -> service -----
 BookController "1" --> "1" BookService
-BookController "1" --> "1" BookDao
-LoanController "1" --> "1" MemberService
 LoanController "1" --> "1" LoanService
 MemberController "1" --> "1" MemberService
 ReservationController "1" --> "1" ReservationService
@@ -249,16 +246,14 @@ ReservationController "1" --> "1" ReservationService
 ' ----- service -> dao & policy -----
 BookService "1" --> "1" BookDao
 LoanService "1" --> "1" LoanDao
-LoanService "1" --> "1" BookDao
+LoanService "1" --> "1" MemberDao
+LoanService "1" --> "1" BookService
 LoanService ..> LoanPolicy
 MemberService "1" --> "1" MemberDao
-MemberService "1" --> "1" BookDao
-MemberService "1" --> "1" LoanDao
-MemberService ..> LoanPolicy
 ReservationService "1" --> "1" ReservationDao
-ReservationService "1" --> "1" BookDao
 ReservationService "1" --> "1" MemberDao
 ReservationService "1" --> "1" LoanDao
+ReservationService "1" --> "1" BookService
 ReservationService ..> LoanPolicy
 
 ' ----- dao -> model / db -----
