@@ -30,7 +30,7 @@ public final class BookService {
      *
      * @return A list of all existing books.
      */
-    public List<Book> listAll() {
+    public List<Book> findAll() {
         return dao.findAll();
     }
 

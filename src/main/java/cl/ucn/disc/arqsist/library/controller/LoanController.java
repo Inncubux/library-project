@@ -10,21 +10,43 @@ import io.javalin.config.JavalinConfig;
 
 import java.util.Objects;
 
+/**
+ * Controller for managing loans.
+ */
 public final class LoanController {
 
-    private final MemberService memberService;
+    /**
+     * The loan service.
+     */
     private final LoanService loanService;
 
-    public LoanController(MemberService memberService, LoanService loanService) {
-        this.memberService = memberService;
+    /**
+     * The constructor.
+     *
+     * @param loanService The loan service.
+     */
+    public LoanController(LoanService loanService) {
         this.loanService = loanService;
     }
 
+    /**
+     * Registers the loan-related routes into the Javalin application configuration.
+     *
+     * Endpoints registered:
+     * <ul>
+     *   <li>{@code POST /loans} - Processes a book checkout for a member.</li>
+     *   <li>{@code GET /loans} - Retrieves all registered loans with accrued fees.</li>
+     *   <li>{@code POST /loans/{id}/return} - Processes the return of a borrowed book.</li>
+     *   <li>{@code GET /loans/overdue} - Retrieves all currently overdue loans.</li>
+     * </ul>
+     *
+     * @param config The Javalin configuration instance.
+     */
     public void register(JavalinConfig config) {
         config.routes.post("/loans", ctx -> {
             int memberId = Integer.parseInt(Objects.requireNonNull(ctx.queryParam("memberId")));
             int bookId = Integer.parseInt(Objects.requireNonNull(ctx.queryParam("bookId")));
-            ctx.json(memberService.checkout(memberId, bookId));
+            ctx.json(loanService.checkout(memberId, bookId));
         });
         config.routes.get("/loans", ctx -> ctx.json(loanService.findAll()));
         config.routes.post("/loans/{id}/return", ctx -> ctx.json(loanService.returnLoan(Integer.parseInt(ctx.pathParam("id")))));
