@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7381ac64-d9e8-46be-a955-421219e6bb24" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/controller/LoanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/controller/LoanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/AccruedFeeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/service/LoanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/service/LoanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/DueDateDuplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/DueDateDuplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/TransactionBugTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/TransactionBugTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,61 +54,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.957694530542093E-123" />
-      <entry key="S2" value="2.103469561407022E-31" />
-      <entry key="S5" value="5.360120170373501E-13" />
-      <entry key="S10" value="7.335909311048847E-7" />
-      <entry key="S30" value="0.03188818071860905" />
-      <entry key="S60" value="1.687696466278637" />
-      <entry key="M2" value="14.291453608223827" />
-      <entry key="M5" value="64.01037700730723" />
-      <entry key="M10" value="136.65994724155547" />
-      <entry key="M15" value="190.23373228417077" />
-      <entry key="M30" value="279.1354934090408" />
-      <entry key="H1" value="345.49376310279837" />
-      <entry key="H2" value="388.7391512155922" />
-      <entry key="H4" value="466.3367800351822" />
-      <entry key="D1" value="1441.5249751473268" />
-      <entry key="W1" value="2121.1637951047687" />
+      <entry key="MS100" value="1.0352850438435501" />
+      <entry key="MS500" value="2.5315639507063903" />
+      <entry key="S2" value="8.134413145813674" />
+      <entry key="S5" value="16.470362623414086" />
+      <entry key="S10" value="28.883231954122298" />
+      <entry key="S30" value="55.929865339057464" />
+      <entry key="S60" value="70.5267963196645" />
+      <entry key="M2" value="81.22426105510505" />
+      <entry key="M5" value="103.91242340781331" />
+      <entry key="M10" value="160.6085633070062" />
+      <entry key="M15" value="221.37848888693478" />
+      <entry key="M30" value="359.31483385047284" />
+      <entry key="H1" value="493.50673561339846" />
+      <entry key="H2" value="591.9720101558669" />
+      <entry key="H4" value="701.0495019072255" />
+      <entry key="D1" value="1701.6618208509192" />
+      <entry key="W1" value="2397.8744641668222" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.000000000000006" />
-      <entry key="S10" value="1.0000000770357136" />
-      <entry key="S30" value="1.0043823430966177" />
-      <entry key="S60" value="1.092401015145174" />
-      <entry key="M2" value="1.8181104425765904" />
-      <entry key="M5" value="6.812469107953182" />
-      <entry key="M10" value="15.168611235701597" />
-      <entry key="M15" value="20.94895798428739" />
-      <entry key="M30" value="29.861207866972556" />
-      <entry key="H1" value="36.09566325739005" />
-      <entry key="H2" value="39.964982141540254" />
-      <entry key="H4" value="45.50843350009716" />
-      <entry key="D1" value="104.08991980104729" />
-      <entry key="W1" value="143.31783225261478" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="2.70131464396E-313" />
+      <entry key="S2" value="7.957988435972312E-79" />
+      <entry key="S5" value="7.772978881483997E-32" />
+      <entry key="S10" value="3.8565412033384353E-16" />
+      <entry key="S30" value="1.419679434327536E-5" />
+      <entry key="S60" value="0.009360431230059283" />
+      <entry key="M2" value="0.3230401153119209" />
+      <entry key="M5" value="3.4084139085578435" />
+      <entry key="M10" value="9.584882201557129" />
+      <entry key="M15" value="15.531209306103747" />
+      <entry key="M30" value="28.578036558831144" />
+      <entry key="H1" value="40.97787513178445" />
+      <entry key="H2" value="49.899574797155445" />
+      <entry key="H4" value="58.421327277508375" />
+      <entry key="D1" value="119.61239441627235" />
+      <entry key="W1" value="160.03100837010425" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.009888723390392809" />
-      <entry key="MS500" value="0.39721720004805233" />
-      <entry key="S2" value="0.7938839309316524" />
-      <entry key="S5" value="0.9118067535022161" />
-      <entry key="S10" value="0.954886534158864" />
-      <entry key="S30" value="1.0209313168093437" />
-      <entry key="S60" value="2.771016360467613" />
-      <entry key="M2" value="16.093087956612383" />
-      <entry key="M5" value="70.77445393037357" />
-      <entry key="M10" value="151.7693588112585" />
-      <entry key="M15" value="211.1274091610214" />
-      <entry key="M30" value="308.95703268262406" />
-      <entry key="H1" value="381.5654241996259" />
-      <entry key="H2" value="428.6908285234972" />
-      <entry key="H4" value="511.83746023833055" />
-      <entry key="D1" value="1545.6114578756574" />
-      <entry key="W1" value="2264.480927804489" />
+      <entry key="MS100" value="0.9673440771223952" />
+      <entry key="MS500" value="2.5074460381804125" />
+      <entry key="S2" value="8.117923604595811" />
+      <entry key="S5" value="16.45764630023659" />
+      <entry key="S10" value="28.87204463219831" />
+      <entry key="S30" value="55.92174084953747" />
+      <entry key="S60" value="70.52954034821427" />
+      <entry key="M2" value="81.53594224136849" />
+      <entry key="M5" value="107.28694105491813" />
+      <entry key="M10" value="170.14662118404215" />
+      <entry key="M15" value="236.86014107184798" />
+      <entry key="M30" value="387.8488174764617" />
+      <entry key="H1" value="534.4536916462315" />
+      <entry key="H2" value="641.8529595988272" />
+      <entry key="H4" value="759.4598838367828" />
+      <entry key="D1" value="1821.2701715431128" />
+      <entry key="W1" value="2557.9046806304577" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -118,39 +120,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.library.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build libreria.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DueDateDuplicationTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TransactionBugTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.library [:cl.ucn.disc.arqsist.library.App.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.library [artifactTransforms].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/axel0/OneDrive/Escritorio/libreria&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.library.executor": "Run",
+    "Gradle.AccruedFeeTest.executor": "Run",
+    "Gradle.Build libreria.executor": "Run",
+    "Gradle.DueDateDuplicationTest.executor": "Run",
+    "Gradle.TransactionBugTest.executor": "Run",
+    "Gradle.library [:cl.ucn.disc.arqsist.library.App.main()].executor": "Run",
+    "Gradle.library [artifactTransforms].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/axel0/OneDrive/Escritorio/libreria",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.library">
+}]]></component>
+  <component name="RunManager" selected="Gradle.TransactionBugTest">
     <configuration name="library" type="Application" factoryName="Application" temporary="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-26" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -164,6 +167,33 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="AccruedFeeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;cl.ucn.disc.arqsist.library.AccruedFeeTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
     </configuration>
     <configuration name="DueDateDuplicationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -246,9 +276,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.library" />
         <item itemvalue="Gradle.TransactionBugTest" />
         <item itemvalue="Gradle.DueDateDuplicationTest" />
+        <item itemvalue="Gradle.AccruedFeeTest" />
+        <item itemvalue="Application.library" />
         <item itemvalue="Gradle.library [artifactTransforms]" />
       </list>
     </recent_temporary>
@@ -273,6 +304,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="NONE" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/DueDateDuplicationTest.java</url>
+          <line>30</line>
+          <placement>INTER_LINE</placement>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

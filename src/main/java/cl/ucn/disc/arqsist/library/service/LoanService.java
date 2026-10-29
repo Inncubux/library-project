@@ -60,7 +60,7 @@ public final class LoanService {
      * @return A list containing all loans.
      */
     public List<Loan> findAll() {
-        return withAccruedFees(LoanDao.findAll());
+        return withAccruedFees(loanDao.findAll());
     }
 
     /**
