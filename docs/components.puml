@@ -1,0 +1,60 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title C4 Model - Level 3: Components (Javalin Monolith Application)
+
+ContainerDb(db, "SQLite Database", "SQLite, ORMLite", "Stores persistent data locally.")
+
+Container_Boundary(app, "Javalin Monolith Application") {
+
+    Boundary(controllers, "Controllers Layer") {
+        Component(book_ctrl, "BookController", "Javalin Handler", "Manages book endpoints (/books).")
+        Component(loan_ctrl, "LoanController", "Javalin Handler", "Manages loan endpoints (/loans).")
+        Component(member_ctrl, "MemberController", "Javalin Handler", "Manages member endpoints (/members).")
+        Component(res_ctrl, "ReservationController", "Javalin Handler", "Manages reservation endpoints (/reservations).")
+    }
+
+    Boundary(services, "Services Layer") {
+        Component(book_svc, "BookService", "Java Class", "Handles book inventory (borrow/return).")
+        Component(loan_svc, "LoanService", "Java Class", "Handles checkout, returns, overdue calculations, and fees.")
+        Component(member_svc, "MemberService", "Java Class", "Handles member registration and retrieval.")
+        Component(res_svc, "ReservationService", "Java Class", "Handles reservations and fulfillment into loans.")
+        Component(policy, "LoanPolicy", "Business Rule", "Defines due days and overdue fee rates.")
+    }
+
+    Boundary(daos, "Data Access Layer (DAO)") {
+        Component(base_dao, "BaseDao<T>", "ORMLite Generic DAO", "Provides CRUD and transaction management.")
+        Component(book_dao, "BookDao", "Java Class", "Persists Book entities.")
+        Component(member_dao, "MemberDao", "Java Class", "Persists Member entities.")
+        Component(loan_dao, "LoanDao", "Java Class", "Persists Loan entities.")
+        Component(res_dao, "ReservationDao", "Java Class", "Persists Reservation entities.")
+    }
+}
+
+' Relationships - Controllers to Services
+Rel(book_ctrl, book_svc, "Calls")
+Rel(loan_ctrl, loan_svc, "Calls")
+Rel(member_ctrl, member_svc, "Calls")
+Rel(res_ctrl, res_svc, "Calls")
+
+' Relationships - Services to DAOs & Policies
+Rel(book_svc, book_dao, "Uses")
+Rel(loan_svc, loan_dao, "Uses")
+Rel(loan_svc, member_dao, "Uses")
+Rel(loan_svc, book_svc, "Uses")
+Rel(loan_svc, policy, "Applies")
+Rel(member_svc, member_dao, "Uses")
+Rel(res_svc, res_dao, "Uses")
+Rel(res_svc, member_dao, "Uses")
+Rel(res_svc, loan_dao, "Uses")
+Rel(res_svc, book_svc, "Uses")
+Rel(res_svc, policy, "Applies")
+
+' DAO Inheritance & DB access
+Rel(book_dao, base_dao, "Extends")
+Rel(member_dao, base_dao, "Extends")
+Rel(loan_dao, base_dao, "Extends")
+Rel(res_dao, base_dao, "Extends")
+Rel(base_dao, db, "Reads/Writes", "JDBC / ORMLite")
+
+@enduml

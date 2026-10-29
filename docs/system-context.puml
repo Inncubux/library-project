@@ -1,0 +1,14 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+title C4 Model - Level 1: System Context (Library Management System)
+
+Person(user, "Library User / Staff", "Interacts with the library system via HTTP clients or web interface.")
+System_Ext(clock_sys, "System Clock", "Provides timezone-aware date and time.")
+
+System(system, "Library Management System", "Manages books, members, loans, reservations, and calculates overdue fees via a REST API.")
+
+Rel(user, system, "Uses REST API / Web UI", "HTTP / JSON")
+Rel(system, clock_sys, "Retrieves current date/time", "Java Time API")
+
+@enduml

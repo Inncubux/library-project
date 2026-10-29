@@ -1,0 +1,25 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title C4 Model - Level 4: Code (ReservationService Fulfillment Flow)
+
+Container_Boundary(app, "Javalin Monolith Application") {
+
+    Component(res_svc, "ReservationService", "Service Class", "Orchestrates reservations and atomic fulfillment into loans.")
+    Component(base_dao, "BaseDao<T>", "DAO Parent", "Provides transaction wrapper: transaction(Callable).")
+    Component(book_svc, "BookService", "Service Class", "Executes book.borrow() to decrement available copies.")
+    Component(loan_dao, "LoanDao", "DAO Class", "Persists the newly created Loan entity.")
+    Component(res_dao, "ReservationDao", "DAO Class", "Updates reservation fulfillment status.")
+
+    Component(reservation, "Reservation", "Entity Model", "Holds reservedAt and fulfilled status.")
+    Component(loan, "Loan", "Entity Model", "Holds loanDate, dueDate, and fee attributes.")
+}
+
+Rel(res_svc, base_dao, "Wraps operations in transaction", "Database Transaction")
+Rel(res_svc, book_svc, "Calls borrow(bookId)", "Inventory check & decrement")
+Rel(res_svc, loan_dao, "Calls create(loan)", "Persistence")
+Rel(res_svc, res_dao, "Calls update(reservation)", "State change (fulfilled = true)")
+Rel(res_svc, reservation, "Reads / Modifies", "Java Object")
+Rel(res_svc, loan, "Instantiates", "Java Object")
+
+@enduml

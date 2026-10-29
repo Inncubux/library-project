@@ -1,0 +1,18 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title C4 Model - Level 2: Containers (Library Management System)
+
+Person(user, "Library User / Staff", "Interacts with the library system.")
+System_Ext(clock_sys, "System Clock", "Provides system time.")
+
+System_Boundary(system, "Library Management System") {
+    Container(app, "Javalin Monolith Application", "Java, Javalin, SLF4J, Jackson", "Provides REST API endpoints, routing, exception handling, business logic, and static files.")
+    ContainerDb(db, "SQLite Database", "SQLite, ORMLite", "Stores persistent data for books, members, loans, and reservations locally.")
+}
+
+Rel(user, app, "Uses REST API / Static Web UI", "HTTP / JSON")
+Rel(app, db, "Reads/Writes data via ORMLite transactions", "JDBC")
+Rel(app, clock_sys, "Retrieves current date/time", "Java Time API")
+
+@enduml
