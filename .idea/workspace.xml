@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7381ac64-d9e8-46be-a955-421219e6bb24" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/AccruedFeeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/service/LoanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/ucn/disc/arqsist/library/service/LoanService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/DueDateDuplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/DueDateDuplicationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/TransactionBugTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/TransactionBugTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/AccruedFeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/AccruedFeeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/DatabaseSeedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cl/ucn/disc/arqsist/library/DatabaseSeedTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,61 +51,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0352850438435501" />
-      <entry key="MS500" value="2.5315639507063903" />
-      <entry key="S2" value="8.134413145813674" />
-      <entry key="S5" value="16.470362623414086" />
-      <entry key="S10" value="28.883231954122298" />
-      <entry key="S30" value="55.929865339057464" />
-      <entry key="S60" value="70.5267963196645" />
-      <entry key="M2" value="81.22426105510505" />
-      <entry key="M5" value="103.91242340781331" />
-      <entry key="M10" value="160.6085633070062" />
-      <entry key="M15" value="221.37848888693478" />
-      <entry key="M30" value="359.31483385047284" />
-      <entry key="H1" value="493.50673561339846" />
-      <entry key="H2" value="591.9720101558669" />
-      <entry key="H4" value="701.0495019072255" />
-      <entry key="D1" value="1701.6618208509192" />
-      <entry key="W1" value="2397.8744641668222" />
+      <entry key="MS100" value="1.0421017515550546" />
+      <entry key="MS500" value="2.6942806641264223" />
+      <entry key="S2" value="8.914194235649482" />
+      <entry key="S5" value="14.13719511949755" />
+      <entry key="S10" value="17.32262160689656" />
+      <entry key="S30" value="20.67574961774726" />
+      <entry key="S60" value="23.799405566002175" />
+      <entry key="M2" value="37.905296926730045" />
+      <entry key="M5" value="83.43614836647414" />
+      <entry key="M10" value="150.77579983583945" />
+      <entry key="M15" value="215.33666627194094" />
+      <entry key="M30" value="363.5449313519292" />
+      <entry key="H1" value="513.1011351751563" />
+      <entry key="H2" value="625.5485308253058" />
+      <entry key="H4" value="743.3377481915998" />
+      <entry key="D1" value="1751.5915823995347" />
+      <entry key="W1" value="2451.8570211912806" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="2.70131464396E-313" />
-      <entry key="S2" value="7.957988435972312E-79" />
-      <entry key="S5" value="7.772978881483997E-32" />
-      <entry key="S10" value="3.8565412033384353E-16" />
-      <entry key="S30" value="1.419679434327536E-5" />
-      <entry key="S60" value="0.009360431230059283" />
-      <entry key="M2" value="0.3230401153119209" />
-      <entry key="M5" value="3.4084139085578435" />
-      <entry key="M10" value="9.584882201557129" />
-      <entry key="M15" value="15.531209306103747" />
-      <entry key="M30" value="28.578036558831144" />
-      <entry key="H1" value="40.97787513178445" />
-      <entry key="H2" value="49.899574797155445" />
-      <entry key="H4" value="58.421327277508375" />
-      <entry key="D1" value="119.61239441627235" />
-      <entry key="W1" value="160.03100837010425" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="5.852078092079805E-134" />
+      <entry key="S5" value="6.873694267732418E-54" />
+      <entry key="S10" value="3.626597330701915E-27" />
+      <entry key="S30" value="2.9965675927627873E-9" />
+      <entry key="S60" value="1.3599180888459035E-4" />
+      <entry key="M2" value="0.03893721663503778" />
+      <entry key="M5" value="1.462162722832277" />
+      <entry key="M10" value="6.27781436003544" />
+      <entry key="M15" value="11.713492363389257" />
+      <entry key="M30" value="24.818352611591255" />
+      <entry key="H1" value="38.187367111784525" />
+      <entry key="H2" value="48.17059222678661" />
+      <entry key="H4" value="57.40027722428044" />
+      <entry key="D1" value="119.26141174663654" />
+      <entry key="W1" value="159.96384037323213" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9673440771223952" />
-      <entry key="MS500" value="2.5074460381804125" />
-      <entry key="S2" value="8.117923604595811" />
-      <entry key="S5" value="16.45764630023659" />
-      <entry key="S10" value="28.87204463219831" />
-      <entry key="S30" value="55.92174084953747" />
-      <entry key="S60" value="70.52954034821427" />
-      <entry key="M2" value="81.53594224136849" />
-      <entry key="M5" value="107.28694105491813" />
-      <entry key="M10" value="170.14662118404215" />
-      <entry key="M15" value="236.86014107184798" />
-      <entry key="M30" value="387.8488174764617" />
-      <entry key="H1" value="534.4536916462315" />
-      <entry key="H2" value="641.8529595988272" />
-      <entry key="H4" value="759.4598838367828" />
-      <entry key="D1" value="1821.2701715431128" />
-      <entry key="W1" value="2557.9046806304577" />
+      <entry key="MS100" value="1.006882724515503" />
+      <entry key="MS500" value="2.6707382234396904" />
+      <entry key="S2" value="8.889124834625504" />
+      <entry key="S5" value="14.121568558076602" />
+      <entry key="S10" value="17.31314634782954" />
+      <entry key="S30" value="20.67199109313237" />
+      <entry key="S60" value="23.7973349327529" />
+      <entry key="M2" value="37.941474235273816" />
+      <entry key="M5" value="84.88293807734733" />
+      <entry key="M10" value="157.0224431266861" />
+      <entry key="M15" value="227.0124241244716" />
+      <entry key="M30" value="388.32483365003145" />
+      <entry key="H1" value="551.2595886045439" />
+      <entry key="H2" value="673.7010920455291" />
+      <entry key="H4" value="800.7272456171326" />
+      <entry key="D1" value="1870.8489579624468" />
+      <entry key="W1" value="2611.8200693716794" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -126,6 +123,7 @@
     "Application.library.executor": "Run",
     "Gradle.AccruedFeeTest.executor": "Run",
     "Gradle.Build libreria.executor": "Run",
+    "Gradle.DatabaseSeedTest.executor": "Run",
     "Gradle.DueDateDuplicationTest.executor": "Run",
     "Gradle.TransactionBugTest.executor": "Run",
     "Gradle.library [:cl.ucn.disc.arqsist.library.App.main()].executor": "Run",
@@ -153,7 +151,7 @@
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.TransactionBugTest">
+  <component name="RunManager" selected="Gradle.DatabaseSeedTest">
     <configuration name="library" type="Application" factoryName="Application" temporary="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-26" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -182,6 +180,33 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;cl.ucn.disc.arqsist.library.AccruedFeeTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="DatabaseSeedTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;cl.ucn.disc.arqsist.library.DatabaseSeedTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -249,38 +274,13 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="library [artifactTransforms]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="artifactTransforms" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DatabaseSeedTest" />
         <item itemvalue="Gradle.TransactionBugTest" />
         <item itemvalue="Gradle.DueDateDuplicationTest" />
         <item itemvalue="Gradle.AccruedFeeTest" />
         <item itemvalue="Application.library" />
-        <item itemvalue="Gradle.library [artifactTransforms]" />
       </list>
     </recent_temporary>
   </component>

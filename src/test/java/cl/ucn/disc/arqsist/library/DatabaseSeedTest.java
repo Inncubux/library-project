@@ -23,6 +23,22 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 class DatabaseSeedTest {
 
+    /**
+     * Verifies that the database seeding mechanism correctly populates initial data
+     * and maintains idempotency when executed multiple times.
+     *
+     * <p>Test scenario:
+     * <ul>
+     *   <li>Initializes an in-memory database and invokes {@link Database#seedIfEmpty()}.</li>
+     *   <li>Asserts that loans and reservations are successfully created and populated.</li>
+     *   <li>Validates that at least one open loan is currently marked as overdue relative to the current date.</li>
+     *   <li>Verifies state consistency: ensures books associated with open loans correctly reflect
+     *       decremented available copies ({@code availableCopies < totalCopies}).</li>
+     *   <li>Invokes {@link Database#seedIfEmpty()} a second time to test idempotency, ensuring
+     *       that the total count of loans and reservations remains unchanged without duplicating records.</li>
+     * </ul>
+     * </p>
+     */
     @Test
     void testDatabaseSeedAndIdempotency() throws Exception {
         Database db = new Database("jdbc:sqlite::memory:");

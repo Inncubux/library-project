@@ -29,10 +29,26 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 class AccruedFeeTest {
 
+    /**
+     * The loan service
+     */
     private LoanService loanService;
+
+    /**
+     * The overdue loan;
+     */
     private Loan overdueLoan;
+
+    /**
+     * The active loan;
+     */
     private Loan activeLoan;
 
+    /**
+     * Sets up an in-memory database and test fixtures before each test execution.
+     *
+     * @throws Exception If an error occurs during database setup or data creation.
+     */
     @BeforeEach
     void setUp() throws Exception {
         Database db = new Database("jdbc:sqlite::memory:");
@@ -61,6 +77,19 @@ class AccruedFeeTest {
         loanDao.create(activeLoan);
     }
 
+    /**
+     * Verifies that {@link LoanService#findAll()} correctly calculates and populates
+     * the accrued overdue fees for open overdue loans while leaving active (non-overdue)
+     * loans with a zero fee.
+     *
+     * <p>Test scenario:
+     * <ul>
+     *   <li>An overdue loan is evaluated, having a due date set 24 days prior to the current fixed clock date,
+     *       expecting an accrued fee of 24.0 (24 days * FEE_PER_DAY).</li>
+     *   <li>An active loan is evaluated, having a future due date, expecting an accrued fee of 0.0.</li>
+     * </ul>
+     * </p>
+     */
     @Test
     void testAccruedFees() {
         List<Loan> loans = loanService.findAll();
