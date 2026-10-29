@@ -33,7 +33,7 @@ public final class LoanPolicy {
      * @param loanDate The day of the loan.
      * @return The due date.
      */
-    public static LocalDate computeDueDate(LocalDate loanDate) {
+    public static LocalDate dueDate(LocalDate loanDate) {
         return loanDate.plusDays(DUE_DATE);
     };
 }

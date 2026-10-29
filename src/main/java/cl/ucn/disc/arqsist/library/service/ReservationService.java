@@ -99,7 +99,7 @@ public final class ReservationService {
         reservation.setFulfilled(true);
         reservationDao.update(reservation);
 
-        LocalDate dueDate = LoanPolicy.computeDueDate(LocalDate.now());
+        LocalDate dueDate = LoanPolicy.dueDate(LocalDate.now());
         Loan loan = new Loan(reservation.getMember(), reservation.getBook(), LocalDate.now(), dueDate);
         loanDao.create(loan);
         return loan;
