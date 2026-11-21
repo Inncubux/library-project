@@ -116,6 +116,26 @@ and members.
 | POST   | `/reservations`              | Reserve `?memberId=&bookId=`                    |
 | POST   | `/reservations/{id}/fulfill` | Fulfill a reservation                           |
 
+### gRPC API
+
+The member module is also a gRPC service. The contract is `src/main/proto/member.proto`. The server binds to `127.0.0.1:50051` at startup. The browser keeps using REST. `MemberClientApp` is an example gRPC client.
+
+| RPC | Request | Reply |
+| --- | --- | --- |
+| `RegisterMember` | `RegisterMemberRequest` | `MemberMessage` |
+| `ListMembers` | `ListMembersRequest` | `ListMembersReply` |
+| `GetMember` | `GetMemberRequest` | `MemberMessage` |
+
+A missing member gives the gRPC status `NOT_FOUND`. There is no TLS and no authentication: the server accepts connections from the local host only.
+
+Start the app with `./gradlew run`. Then run the client in a second terminal:
+
+```bash
+./gradlew runClient
+./gradlew runClient --args="1 2"
+```
+
+
 ### Notes & examples
 
 All responses are JSON. `POST` bodies are JSON; loan/reservation creation passes the IDs as query parameters instead of
