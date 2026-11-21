@@ -79,6 +79,7 @@ package "service" <<service>> {
     + register(Member) : Member
     + findAll() : List<Member>
     + findById(int) : Member
+    + search(String) : List<Member>
   }
 
   class ReservationService {
@@ -121,6 +122,7 @@ package "dao" <<dao>> {
 
   class MemberDao {
     + MemberDao(ConnectionSource)
+    + findByNameContaining(String) : List<Member>
   }
 
   class LoanDao {
@@ -250,6 +252,7 @@ package "grpc" <<grpc>> {
     + registerMember(RegisterMemberRequest, StreamObserver<MemberMessage>): void
     + listMembers(ListMembersRequest, StreamObserver<ListMembersReply>): void
     + getMember(GetMemberRequest, StreamObserver<MemberMessage>): void
+    + searchMembers(SearchMembersRequest, StreamObserver<ListMembersReply>): void
   }
 
   class MemberClient {
@@ -260,6 +263,7 @@ package "grpc" <<grpc>> {
     + register(Member): Member
     + findAll(): List<Member>
     + findById(int): Member
+    + search(String): List<Member>
     + close(): void
   }
 
