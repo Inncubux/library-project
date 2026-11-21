@@ -25,33 +25,37 @@ skinparam package<<db>> {
   BackgroundColor #F3E5F5
   BorderColor #7B1FA2
 }
+skinparam package<<grpc>> {
+  BackgroundColor #E0F7FA
+  BorderColor #00838F
+}
 hide stereotype
 
 package "controller" <<controller>> {
   class BookController {
-- BookService service
+    - BookService service
     + register(JavalinConfig) : void
   }
 
   class LoanController {
-- LoanService loanService
+    - LoanService loanService
     + register(JavalinConfig) : void
   }
 
   class MemberController {
-- MemberService service
+    - MemberService service
     + register(JavalinConfig) : void
   }
 
   class ReservationController {
-- ReservationService service
+    - ReservationService service
     + register(JavalinConfig) : void
   }
 }
 
 package "service" <<service>> {
   class BookService {
-- BookDao dao
+    - BookDao dao
     + listAll() : List<Book>
     + findById(int) : Book
     + create(Book) : Book
@@ -60,10 +64,10 @@ package "service" <<service>> {
   }
 
   class LoanService {
-- LoanDao loanDao
-- MemberDao memberDao
-- BookService bookService
-- Clock clock
+    - LoanDao loanDao
+    - MemberDao memberDao
+    - BookService bookService
+    - Clock clock
     + checkout(int, int) : Loan
     + findAll() : List<Loan>
     + returnLoan(int) : Loan
@@ -71,17 +75,18 @@ package "service" <<service>> {
   }
 
   class MemberService {
-- MemberDao memberDao
+    - MemberDao memberDao
     + register(Member) : Member
     + findAll() : List<Member>
+    + findById(int) : Member
   }
 
   class ReservationService {
-- ReservationDao reservationDao
-- MemberDao memberDao
-- LoanDao loanDao
-- BookService bookService
-- Clock clock
+    - ReservationDao reservationDao
+    - MemberDao memberDao
+    - LoanDao loanDao
+    - BookService bookService
+    - Clock clock
     + reserve(int, int) : Reservation
     + findAll() : List<Reservation>
     + fulfill(int) : Loan
@@ -134,12 +139,12 @@ package "dao" <<dao>> {
 
 package "model" <<model>> {
   class Book {
-- int id
-- String title
-- String author
-- String isbn
-- int totalCopies
-- int availableCopies
+    - int id
+    - String title
+    - String author
+    - String isbn
+    - int totalCopies
+    - int availableCopies
     + Book()
     + Book(String, String, String, int)
     + getId() : int
@@ -157,9 +162,9 @@ package "model" <<model>> {
   }
 
   class Member {
-- int id
-- String name
-- String email
+    - int id
+    - String name
+    - String email
     + Member()
     + Member(String, String)
     + getId() : int
@@ -171,14 +176,14 @@ package "model" <<model>> {
   }
 
   class Loan {
-- int id
-- Member member
-- Book book
-- LocalDate loanDate
-- LocalDate dueDate
-- LocalDate returnDate
-- boolean returned
-- double overdueFee
+    - int id
+    - Member member
+    - Book book
+    - LocalDate loanDate
+    - LocalDate dueDate
+    - LocalDate returnDate
+    - boolean returned
+    - double overdueFee
     + Loan()
     + Loan(Member, Book, LocalDate, LocalDate)
     + getId() : int
@@ -200,11 +205,11 @@ package "model" <<model>> {
   }
 
   class Reservation {
-- int id
-- Member member
-- Book book
-- LocalDate reservedAt
-- boolean fulfilled
+    - int id
+    - Member member
+    - Book book
+    - LocalDate reservedAt
+    - boolean fulfilled
     + Reservation()
     + Reservation(Member, Book, LocalDate)
     + getId() : int
@@ -222,19 +227,52 @@ package "model" <<model>> {
 
 package "db" <<db>> {
   class Database {
-- ConnectionSource connectionSource
+    - ConnectionSource connectionSource
     + connectionSource() : ConnectionSource
     + seedIfEmpty() : void
   }
 
   class LocalDatePersister {
-- {static} LocalDatePersister SINGLETON
+    - {static} LocalDatePersister SINGLETON
     + {static} getSingleton() : LocalDatePersister
     + parseDefaultString(FieldType, String) : Object
     + resultToSqlArg(FieldType, DatabaseResults, int) : Object
     + sqlArgToJava(FieldType, Object, int) : Object
     + javaToSqlArg(FieldType, Object) : Object
   }
+}
+
+package "grpc" <<grpc>> {
+  class MemberGrpcService {
+    + {static} HOST: String
+    + {static} PORT: int
+    - MemberService memberService
+    + registerMember(RegisterMemberRequest, StreamObserver<MemberMessage>): void
+    + listMembers(ListMembersRequest, StreamObserver<ListMembersReply>): void
+    + getMember(GetMemberRequest, StreamObserver<MemberMessage>): void
+  }
+
+  class MemberClient {
+    - channel: ManagedChannel
+    - stub: MemberServiceBlockingStub
+    + MemberClient(String, int)
+    + MemberClient(ManagedChannel)
+    + register(Member): Member
+    + findAll(): List<Member>
+    + findById(int): Member
+    + close(): void
+  }
+
+  class MemberClientApp {
+    + {static} main(String[]): void
+  }
+
+  abstract class MemberServiceImplBase <<generated>>
+  class MemberServiceBlockingStub <<generated>>
+
+  note "Both classes are generated from member.proto." as GeneratedNote
+  GeneratedNote .. MemberServiceImplBase
+  GeneratedNote .. MemberServiceBlockingStub
 }
 
 ' ----- controller -> service -----
@@ -264,6 +302,16 @@ ReservationDao "1" --> "0..*" Reservation
 BaseDao "1" ..> "1" Database
 Loan ..> LocalDatePersister
 Reservation ..> LocalDatePersister
+
+' ----- grpc -----
+MemberGrpcService --|> MemberServiceImplBase
+MemberGrpcService "1" --> "1" MemberService
+MemberGrpcService ..> Member
+MemberGrpcService ..> NotFoundException
+MemberClientApp "1" --> "1" MemberClient
+MemberClient ..> MemberServiceBlockingStub
+MemberClient ..> Member
+MemberClient ..> NotFoundException
 
 ' ----- model relationships -----
 Loan "0..*" --> "1" Member
