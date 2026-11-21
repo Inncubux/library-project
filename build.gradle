@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'cl.ucn.disc.arqsist'
-version = '2.0.1'
+version = '2.0.4'
 
 repositories {
     mavenCentral()
@@ -39,7 +39,7 @@ protobuf {
             artifact = 'io.grpc:protoc-gen-grpc-java:1.85.1'
         }
     }
-    generateProtoTasks () {
+    generateProtoTasks {
         all().each { task ->
             task.plugins {
                 grpc {}
@@ -52,11 +52,11 @@ application {
     mainClass = 'cl.ucn.disc.arqsist.library.App'
 }
 
-tasks.register('runClient', JavaExec){
+tasks.register('runClient', JavaExec) {
     group = 'application'
     description = 'Run the member gRPC client.'
     classpath = sourceSets.main.runtimeClasspath
-    mainClass = 'cl.ucn.disc.arqist.library.MemberClientApp'
+    mainClass = 'cl.ucn.disc.arqsist.library.MemberClientApp'
 }
 
 test {
