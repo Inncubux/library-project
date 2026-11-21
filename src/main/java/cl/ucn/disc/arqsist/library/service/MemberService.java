@@ -70,4 +70,18 @@ public final class MemberService {
         }
         return member;
     }
+
+    /**
+     * Search members by a name fragment.
+     *
+     * @param query the name fragment
+     * @return matching members ordered by ID ascending
+     * @throws IllegalArgumentException if query is null or blank
+     */
+    public List<Member> search(String query) {
+        if (query == null || query.trim().isEmpty()) {
+            throw new IllegalArgumentException("Search query must not be blank");
+        }
+        return memberDao.findByNameContaining(query.trim());
+    }
 }

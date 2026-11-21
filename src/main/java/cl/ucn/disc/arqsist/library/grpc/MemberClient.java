@@ -158,4 +158,24 @@ public final class MemberClient implements AutoCloseable {
         member.setId(message.getId());
         return member;
     }
+
+    /**
+     * Search members by a name fragment.
+     *
+     * @param query the name fragment
+     * @return matching members
+     */
+    public List<Member> search(String query) {
+        try {
+            ListMembersReply reply = stub.withDeadlineAfter(DEADLINE_SECONDS, TimeUnit.SECONDS)
+                    .searchMembers(SearchMembersRequest.newBuilder()
+                            .setQuery(query == null ? "" : query)
+                            .build());
+            return reply.getMembersList().stream()
+                    .map(MemberClient::toMember)
+                    .toList();
+        } catch (StatusRuntimeException e) {
+            throw toException(e);
+        }
+    }
 }
